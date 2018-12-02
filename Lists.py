@@ -44,7 +44,7 @@ print(motorcycles)
 popped_motorcycle = motorcycles.pop() #the pop function removes the last item of the list but it can also be worked on
 print(motorcycles)
 print(popped_motorcycle)
-------EXAMPLE-------#
+#------EXAMPLE-------#
 motorcycles = ['honda', 'yamaha', 'suzuki']
 last_owned = motorcycles.pop()
 print("The last motorcycle that i owned was " + last_owned.title() + ".")
