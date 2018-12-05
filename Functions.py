@@ -74,6 +74,11 @@
 
 #The change in this block of code is that we changed the animal_type to have a default value of 'dog'. The order of the parameters in the function def had to be changed because the default value makes it specify a type of animal as an arguement. The only arguement left in the function call is the pet's name. This means that python will think it as a positional arguement. To fix this, I placed the pets_name in front of animal_type
 
+#Another Example
+# def describe_city(name_of_city, country):
+#     print(name_of_city + " is in " + country)
+# describe_city("London", "UK")
+
 #-Equivalent Function Calls
 # def describe_pet(pet_name, animal_type = 'dog'):
 #     print("\nI have a " + animal_type + ".")
@@ -91,4 +96,88 @@
 #There are multiple ways to make a function call but also have the same output.
 
 #--------------------Return Values
+#A function can also process some data and then return a value or a set of values.
+#The return statement takes a value from inside a function and sends it back to the line that called the function.
+
+# def formatted_name(first_name, last_name): #Here i made 2 parameters and they are first name and last name.
+#     full_name = first_name + " " + last_name #This line combines the two parameters together and stores it in a variable
+#     return full_name.title() #
+#
+# musician = get_formatted_name('jimi', 'hendrix') #When calling a function that returns a value, you need to provide a variable where the return value can be stored.
+# print(musician)
+
+#Another Example
+# def city_country(city, country):
+#     full_city_country = city + " " + country
+#     return full_city_country.title()
+#
+# place = city_country('london', 'UK')
+# print(place)
+
+#----Making an argument optional
+# def formatted_name(first_name, last_name, middle_name=''): # first name and last name are listed first. The middle name is optional so its listed last and has a default value of a empty string.
+#     if middle_name: # This line checks to see if a middle_name has been provided. Python interprets the non-empty string as True.
+#         full_name = first_name + ' ' + middle_name + ' ' + last_name
+#     else: #If a middle name is not provided, this will result the test to be false. This will run the else statement
+#         full_name = first_name + ' ' + last_name
+#     return full_name.title()
+# musician = formatted_name('linda', 'fee')
+# print(musician)
+#
+# musician = formatted_name('jason', 'leung', 'von')
+# print(musician)
+
+#Another Example
+# def make_album(artist_name, album_title, number_of_tracks):
+#     if number_of_tracks:
+#         full_album = artist_name.title() + " - " + album_title + " - " + number_of_tracks
+#     else:
+#         full_album = artist_name.title() + " - " + album_title
+#     return full_album
+# album = make_album('john lennon', 'Top 50 charts', '50')
+# print(album)
+
+#----Returning a Dictionary
+# def build_person(first_name, last_name, age=''):
+#     person = {'first': first_name, 'last': last_name} # the function takes in the first and last name. It takes these values into a dictionary. first_name is stored with the key 'first', the value of last_name is stored with the key 'last'.
+#     if age:
+#         person['age'] = age
+#     return person # The entire dictionary representing the person is returned in this line.
+# musician = build_person('jason', 'leung', age=18)
+# print(musician) # The return value is printed.
+
+#----Using a function with a while loop
+# def formatted_name(first_name, last_name):
+#     full_name = first_name + " " + last_name
+#     return full_name.title()
+# while True: # This line makes the loop forever
+#     print("\nPlease enter your name:")
+#     print("(enter 'q' at any time to quit)")
+#
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#     formatted_names = formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_names + "!")
+
+#Another example
+def make_album(artist_name, album_title):
+    albums = {}
+    albums["artist's name"]= artist_name
+    albums["album_title"]= album_title
+    return albums
+while True:
+    print("\nEnter an album's artist and title")
+    print("\nTo quit, press 'q'")
+    artist = input("Artist: ")
+    if artist == 'q':
+        break
+    name_of_album = input('Album: ')
+    if name_of_album == 'q':
+        break
+    name_and_album = make_album(artist, name_of_album)
+    print(name_and_album)
 
