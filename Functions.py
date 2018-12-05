@@ -180,4 +180,29 @@ while True:
         break
     name_and_album = make_album(artist, name_of_album)
     print(name_and_album)
+    
+#-------------------Passing a list
+# def greet_user(names):
+#     for name in names:
+#         msg = "Hello, " + name.title() + "!"
+#         print(msg)
+# people = ['jason', 'alvin', 'george'] # In this line, i defined a list of names. Then i pass the 'people' to greet_user() in the function call
+# greet_user(people) #This line is a function call in which in this example will create a greeting message for each item in the list. 
+
+#----Modifying a list in a function
+# def print_models(unprinted_desings, completed_models): #Here, i defined the function with two parametes. A list that need to printed and a list of completed models. This entire function makes it so that for every item in unprinted_designs, it will add it to the completed_models.
+#     while unprinted_desings:
+#         current_design = unprinted_desings.pop()
+#         print("Printing model: " + current_design)
+#         completed_models.append(current_design)
+
+# def show_completed_models(completed_models): #This function has one parameter. show_completed_models() would display the name of each model that was printed
+#     print("\nThe following models have been printed:")
+#     for completed_model in completed_models:
+#         print(completed_model)
+# unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+# completed_models = []
+
+# print_models(unprinted_designs, completed_models)
+# show_completed_models(completed_models)
 
