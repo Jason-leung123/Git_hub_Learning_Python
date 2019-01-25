@@ -85,3 +85,37 @@ print(Animals)
 Animals =['Cat', 'Dog', 'Bird', 'Alligator']
 print(len(Animals)) # This line displays how many items there are in the list.
 
+#---------------------List comprehension
+# a_list = [1, '4', 9, 'a', 0, 4]
+
+# squared_ints = [ e**2 for e in a_list if type(e) == int]
+
+# print(squared_ints)
+
+# t = [1, 2, -1, -2]
+# squares = [abs(x) for x in t]
+# print(squares)
+
+# a = int(input("Enter a number:"))
+# s = [(x, x**2) for x in range(a+1)]
+# print(s)
+
+#flattening a list
+# vec = [[1,2,3], [4,5,6],[7,8,9]]
+# g = [num for elem in vec for num in elem]
+
+# k = []
+# for i in vec:
+#     for num in i:
+#         k.append(num)
+# print(k)
+# print(g)
+
+# s = 12345, 54321, 'hi'
+
+# z, x, y = s
+
+# print(z)
+# print(x)
+# print(y)
+
