@@ -88,7 +88,8 @@ print(len(Animals)) # This line displays how many items there are in the list.
 #---------------------List comprehension
 # a_list = [1, '4', 9, 'a', 0, 4]
 
-# squared_ints = [ e**2 for e in a_list if type(e) == int]
+# squared_ints = [ e**2 for e in a_list if type(e) == int] # The way list comprehension work is that there is an
+#expression, a variable, an input sequence, and an optional conditional test
 
 # print(squared_ints)
 
