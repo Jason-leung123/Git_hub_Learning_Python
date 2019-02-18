@@ -14,12 +14,12 @@ class number():
     def divide_2_num(self):
         out = self.num / self.num1
         return out
-import math        
+
+import math  
 try:
     question = int(input("How many numbers do you want to use?\n:"))
-
     if question == 1:
-        print("To Factorise, type in = 1\nTo Square root, type in: 2\nTo Square it, type in: 3")
+        print("To Factorise, type in: 1\nTo Square root, type in: 2\nTo Square it, type in: 3")
         choice = input("Please type in one of the items in the list\n:")
         if choice == '1':
             num = int(input("Type in a number:")) 
@@ -35,9 +35,13 @@ try:
     if question == 2:
         output = number(int(input("Type in a number:")),int(input("Type in another number:")))
         while True:
-            s = input("If you want to add, press '1'\nIf you want to subract, press '2'\nIf you want to multiply, press '3'\nIf you want to divide, press '4'\n:")
+            s = input("""If you want to add, press '1'
+If you want to subract, press '2'
+If you want to multiply, press '3'
+If you want to divide, press '4'
+:""")
             if s == '1':
-                print(output.add_2_num()) # problem solved
+                print(output.add_2_num()) 
                 out = output.add_2_num()
                 print("Do you want to include another number? Y/N")
                 answer = input(":")
@@ -45,7 +49,11 @@ try:
                     print("Type in a number")
                     answer1 = int(input(":"))
                     a = (number(out,answer1))
-                    p = int(input(("If you want to add, press '1'\nIf you want to subract, press '2'\nIf you want to multiply, press '3'\nIf you want to divide, press '4'\n:")))
+                    p = int(input(("""If you want to add, press '1'
+If you want to subract, press '2'
+If you want to multiply, press '3'
+If you want to divide, press '4'
+:""")))
                     if p == 1:
                         print(a.add_2_num())
                         break
@@ -70,7 +78,11 @@ try:
                 if answer == 'Y' or 'y' or 'Yes' or 'yes':
                     print("Type in a number")
                     answer1 = int(input(":"))
-                    p = int(input("If you want to add, press '1'\nIf you want to subract, press '2'\nIf you want to multiply, press '3'\nIf you want to divide, press '4'\n:"))
+                    p = int(input("""If you want to add, press '1'
+If you want to subract, press '2'
+If you want to multiply, press '3'
+If you want to divide, press '4'\n
+:"""))
                     a = number(out, answer1)
                     if p == 1:
                         print(a.add_2_num())
@@ -87,7 +99,6 @@ try:
                 elif answer == 'N' or 'n' or 'No' or 'no':
                     break
 
-                     
             elif s == '3':
                 print(output.multiply_2_num())
                 out = output.multiply_2_num()
@@ -96,7 +107,11 @@ try:
                 if answer == 'Y' or 'y' or ' Yes' or 'yes':
                     print("Type in a number")
                     answer1 = int (input(":"))
-                    p = int(input("If you want to add, press '1'\nIf you want to subract, press '2'\nIf you want to multiply, press '3'\nIf you want to divide, press '4'\n:"))
+                    p = int(input("""If you want to add, press '1'
+If you want to subract, press '2'
+If you want to multiply, press '3'
+If you want to divide, press '4'
+:"""))
                     a = number(out, answer1)
                     if p == 1:
                         print(a.add_2_num())
@@ -121,7 +136,11 @@ try:
                 if answer == 'Y' or 'y' or 'Yes' or 'yes':
                     print("Type in a number")
                     answer1 = int(input(":"))
-                    p = int(input("If you want to add, press '1'\nIf you want to subract, press '2'\nIf you want to multiply, press '3'\nIf you want to divide, press '4'\n:"))
+                    p = int(input("""If you want to add, press '1'
+If you want to subract, press '2'
+If you want to multiply, press '3'
+If you want to divide, press '4'
+:"""))
                     a = number(out, answer1)
                     if p == 1:
                         print(a.add_2_num())
@@ -139,10 +158,13 @@ try:
                     break
             else:
                 print("""
-                -----------------------------------------------
-                This value cannot be accepted. Please try agian
-                -----------------------------------------------""")
+-----------------------------------------------
+This value cannot be accepted. Please try agian
+-----------------------------------------------""")
                 continue
-                
+    else:
+        print("You can only choose 2 numbers!")
 except:
-    print("This value cannot be accepted")
+    print("""-----------------------------------------------
+This value cannot be accepted. 
+-----------------------------------------------""")
